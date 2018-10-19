@@ -41,9 +41,15 @@
         </javaClientGenerator>
 
         <!-- 要生成哪些表 -->
-        <table tableName="user1" domainObjectName="User1"
+        <table tableName="bizuser_product_history_record" domainObjectName="Bizuser"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"/>
+        <table tableName="bizuser_send_wine_product" domainObjectName="BizUserSendWineProduct"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <columnOverride column="price_unit" javaType="java.lang.String" jdbcType="VARCHAR" />
+        </table>
     </context>
 </generatorConfiguration>
